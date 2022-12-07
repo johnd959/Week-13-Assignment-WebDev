@@ -4,7 +4,7 @@ submitButton.addEventListener("click", submit);
 
 function submit()
 {
-    console.log("Submit attempted")
+    console.log("Submit attempted");
     document.getElementsByTagName("main")[0].innerHTML = "<p>Thank you for your message</p>";
     document.getElementsByTagName("p")[0].style.fontSize = "24px"; 
 }

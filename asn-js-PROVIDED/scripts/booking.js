@@ -21,12 +21,12 @@ const dayButtons = [
 
 function init()
 {
-    for (i = 0; i < dayButtons.length; i++)
+    for (let i = 0; i < dayButtons.length; i++)
 {
     dayButtons[i].addEventListener("click", updateSelected);
 }
 }
-init()
+init();
 function updateSelected(evt)
 {
     if(evt.currentTarget.classList.contains("clicked"))
@@ -45,29 +45,29 @@ function updateSelected(evt)
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
 
-var clearButton = document.getElementById("clear-button")
-clearButton.addEventListener("click", reset)
+var clearButton = document.getElementById("clear-button");
+clearButton.addEventListener("click", reset);
 
 function reset()
 {
-    for (j = 0; j < dayButtons.length; j++)
+    for (let j = 0; j < dayButtons.length; j++)
     {
-        dayButtons[j].removeEventListener("click", updateSelected)
+        dayButtons[j].removeEventListener("click", updateSelected);
         dayButtons[j].classList.remove("clicked"); 
     }
     totalCost = 0;
     daysSelected = 0;
-    console.log("Days Selected: " + daysSelected)
-    console.log("Cost per day: " + costPerDay)
-    recalculate()
-    init()
+    console.log("Days Selected: " + daysSelected);
+    console.log("Cost per day: " + costPerDay);
+    recalculate();
+    init();
 }
 
 
 var halfButton = document.getElementById("half");
 var fullButton = document.getElementById("full");
 // when the half-day button is clicked, set the daily rate to $20, add the "clicked" class to the "half" element, remove it from the "full" element, and recalculate the total cost.
-halfButton.addEventListener("click", resetDailyRate)
+halfButton.addEventListener("click", resetDailyRate);
 
 function resetDailyRate()
 {
@@ -84,12 +84,12 @@ function resetDailyRate()
         costPerDay = 35;
     }
     console.log("Cost per day: " + costPerDay);
-    recalculate()
+    recalculate();
 
 }
 
 // when the full-day button is clicked, the daily rate is set back to $35, the clicked class is added to "full" and removed from "half", and the total cost is recalculated.
-fullButton.addEventListener("click", resetDailyRate)
+fullButton.addEventListener("click", resetDailyRate);
 
 
 
