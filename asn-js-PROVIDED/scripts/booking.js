@@ -22,9 +22,9 @@ const dayButtons = [
 function init()
 {
     for (let i = 0; i < dayButtons.length; i++)
-{
-    dayButtons[i].addEventListener("click", updateSelected);
-}
+    {
+        dayButtons[i].addEventListener("click", updateSelected);
+    }
 }
 init();
 function updateSelected(evt)
